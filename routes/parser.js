@@ -21,8 +21,18 @@ const getPdf = async (file,skill) => {
         console.log(words);
         let dict = {};
         words.forEach((word, i) => {
-            dict[word] = i;
+            dict[word.toLowerCase()] = i;
         });
+        skill = skill.toLowerCase();
+        let skills = skill.split(/\s+/);
+        let score, count = 0;
+        skills.forEach(sk => {
+            if (dict.hasOwnProperty(sk)) {
+                count += 1;
+            }
+        });
+        score = count / skills.length;
+        console.log(score*100 + '%');
     } catch (error) {
         throw new Error(error);
     }
