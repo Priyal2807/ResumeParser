@@ -4,7 +4,7 @@ const pdfParse = require('pdf-parse');
 
 router.post('/', (req, res) => {
     try {
-        getPdf(req.files.file.data, req.body.skill);
+        getPf(req.files.file.data, req.body.skill);
         res.send({ message: "sucess" });
     } catch (error) {
         res.status(500).send({message:"Internal Server Error"})
