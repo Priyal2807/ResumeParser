@@ -3,22 +3,27 @@ const fs = require('fs');
 const pdfParse = require('pdf-parse');
 
 router.post('/', (req, res) => {
-    try {
-        getPdf(req.files.file.data, req.body.skill);
-        res.send({ message: "success" });
+   /* try {
+        let score = await getPdf(req.files.file.data, req.body.skill);
+        console.log(score);
+        res.status(200).send({ message: "success", data: score });
     } catch (error) {
         res.status(500).send({message:"Internal Server Error"})
-    }
+    }*/
+
+    getPdf(req.files.file.data, req.body.skill).then(x => {
+        res.status(200).send({ message: "success", data: x });
+    }).catch((err)=>{
+        res.status(500).send({ message: "Internal Server Error" })
+        })
 })
 
 const getPdf = async (file,skill) => {
     
     try {
         let pdfExtract = await pdfParse(file);
-        console.log(pdfExtract);
         let extract = pdfExtract.text;
         let words = extract.split(/[,.\n\s+\t+]/)
-        console.log(words);
         let dict = {};
         words.forEach((word, i) => {
             dict[word.toLowerCase()] = i;
@@ -32,7 +37,7 @@ const getPdf = async (file,skill) => {
             }
         });
         score = count / skills.length;
-        console.log(score*100 + '%');
+        return score * 100;
     } catch (error) {
         throw new Error(error);
     }
