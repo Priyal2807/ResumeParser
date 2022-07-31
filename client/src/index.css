@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: midnightblue;
+}
+.container {
+    margin: auto;
+    border: 1px solid white;
+    height: 70vh;
+    width: 80vh;
+    display:flex; /*to bring the form in center of the div*/
+    align-items:center; /*to center along the cross axis i.e vertical*/
+}
+form{
+    text-align: center;
+}
+label, input[type="file"]{
+    color: white;
+    padding: 0.8em;
+}
+
+.nameApp {
+    text-align:center;
+    letter-spacing: calc(1/16rem);
+    color: white;
+}
+
+button{
+    border: none;
+    font-size: 1em;
+    padding:0.5em;
+    background-color:floralwhite;
+    border-radius:10%;
+    margin-top: 1em;
+}
+.skills{
+    border: 1px solid white;
+    width:90%;
+    margin: auto;
+    color: white;
+    margin-top:1em;
+}
+
+.footer{
+    position: fixed;
+    bottom:0;
+    right: 0;
+    height: 10vh;
+    width:100vw;
+    color: white;
+    text-align:center;
+    
+}
+
+.resBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60vw;
+    height: 40vh;
+    color: white;
+    margin: auto;
+    flex-direction: column;
+    text-align: center;
+}
+.resBox h1, .resBox h2 {
+        width: 100%;
+    }
+.resBox button{
+    background: none;
+    border-radius: 10px;
+    color: white;
+    border: 1px solid white;
+}
