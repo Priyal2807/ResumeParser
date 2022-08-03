@@ -5,4 +5,4 @@ A simple resume parser :spiral_notepad: to give a score based on the resume uplo
 ![Alt text](flowchart.png?raw=true "Flowchart for the parser")
 
 
-Yet to be uploaded on Heroku/Netlify
+Yet to be uploaded on Heroku
