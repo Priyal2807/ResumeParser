@@ -13,7 +13,7 @@ app.use(cors());
 app.use(fileUpload());
 app.use('/api/parser', ourParser);
 
-const PORT = process.env.port || 5000;
+const PORT = process.env.PORT || 5000;
 
 
 if (process.env.NODE_ENV === 'production') {
