@@ -15,7 +15,8 @@ const Form = (props) => {
     }
     const submitHandler = async (e) => {
         e.preventDefault();
-        const baseUrl = process.env.baseURL || "http://localhost:5000"
+        //const baseUrl = process.env.baseURL || "http://localhost:5000"
+        const baseUrl = "https://resumeparserappps.herokuapp.com/"
         const url = `${baseUrl}/api/parser`
         e.preventDefault();
         const formData = new FormData();
