@@ -17,7 +17,7 @@ const Form = (props) => {
         e.preventDefault();
         //const baseUrl = process.env.baseURL || "http://localhost:5000"
         const baseUrl = "https://resumeparserappps.herokuapp.com/"
-        const url = `${baseUrl}/api/parser`
+        const url = `${baseUrl}api/parser`
         e.preventDefault();
         const formData = new FormData();
         formData.append('file', file);
