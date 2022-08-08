@@ -17,7 +17,7 @@ const Error = (props) => {
                 <button onClick={handleSubmit}>Go back to Home Page</button>
             </div>) : (<div className="resBox">
                     <h1> Your score is: </h1>
-                    <h2> {params.id} </h2>
+                    <h2> {params.id} % </h2>
                     <button onClick={handleSubmit}>Go back to Home Page</button>
             </div>)}
            
